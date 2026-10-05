@@ -1,0 +1,10 @@
+<%-include("topbar")%>
+<main class="page-shell detail-shell">
+    <% if (message) { %>
+    <a class="back-link" href="/">← All messages</a>
+    <article class="detail-card"><p class="eyebrow">MESSAGE FROM</p><h2><%=message.user%></h2><p class="detail-text"><%=message.text%></p><time><%=message.added%></time></article>
+    <% } else { %>
+    <section class="detail-card"><p class="eyebrow">NOT FOUND</p><h2>Message unavailable</h2><p>This message may have been removed.</p><a class="message-link" href="/">Back to all messages →</a></section>
+    <% } %>
+</main>
+<%-include("footer")%>

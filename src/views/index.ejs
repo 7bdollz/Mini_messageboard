@@ -1,0 +1,17 @@
+<%-include("topbar")%>
+<main class="page-shell">
+    <section class="page-heading">
+        <div><p class="eyebrow">THE COMMUNITY BOARD</p><h2>Messages</h2></div>
+        <p class="heading-note">Small thoughts, shared here.</p>
+    </section>
+    <section class="message-section" aria-label="Messages">
+        <%messages.forEach((message)=>{%>
+            <article class="message-card">
+                <div class="message-topline"><span class="avatar"><%=message.user.charAt(0).toUpperCase()%></span><div><h3><%=message.user%></h3><time><%=message.added%></time></div></div>
+                <p class="message-text"><%=message.text%></p>
+                <a class="message-link" href="/message/<%=message.id%>">Read message <span aria-hidden="true">→</span></a>
+            </article>
+      <%  })%>
+    </section>
+</main>
+<%-include("footer")%>

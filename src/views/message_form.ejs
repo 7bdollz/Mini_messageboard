@@ -1,0 +1,10 @@
+<%-include("topbar")%>
+<main class="page-shell form-shell">
+    <section class="page-heading"><div><p class="eyebrow">ADD TO THE BOARD</p><h2>Write a message</h2></div></section>
+    <form class="message-form" method="POST" action="/new">
+        <label for="name">Your name<input id="name" type="text" placeholder="e.g. Amando" name="user" required maxlength="60"></label>
+        <label for="text">Your message<textarea id="text" placeholder="What would you like to share?" name="text" required maxlength="500" rows="5"></textarea></label>
+        <button type="submit">Post message <span aria-hidden="true">→</span></button>
+    </form>
+</main>
+<%-include("footer")%>
