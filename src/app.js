@@ -16,6 +16,9 @@ app.use((req,res,next)=>
     res.locals.title = "Mini Messageboard"
     next()
 })
+app.get("/health", (req, res) => {
+  res.status(200).send("OK");
+});
 
 //add routers to app
 app.use("/",indexRoute)
